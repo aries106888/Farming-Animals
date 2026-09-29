@@ -1,0 +1,331 @@
+/* ==========================================================================
+   Green Valley Animal Farm - Custom Responsive Stylesheet
+   ========================================================================== */
+
+:root {
+  --primary: #8b4513;
+  --primary-dark: #6f3610;
+  --primary-light: #a75d28;
+  --primary-subtle: #f5ebe0;
+  --accent: #d97706;
+  --accent-green: #2e7d32;
+  --cream: #faf6f1;
+  --text-dark: #2c2724;
+  --text-muted: #5c5550;
+  --card-radius: 12px;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text-dark);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+h2.section-title {
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 1.75rem;
+}
+
+h2.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+p {
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Navigation */
+.navbar-custom {
+  background-color: var(--primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 0.75rem 0;
+}
+
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-custom .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Carousel / Hero Section */
+.carousel-item {
+  height: clamp(260px, 45vw, 420px);
+  background-color: #1a1614;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.88);
+}
+
+.carousel-caption {
+  background: rgba(111, 54, 16, 0.85);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  left: 8%;
+  right: 8%;
+  bottom: 25px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-caption h3 {
+  font-size: clamp(1.2rem, 3vw, 1.9rem);
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.carousel-caption p {
+  color: #f7ede2 !important;
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+}
+
+/* Page Banner (for dedicated sub-pages) */
+.page-banner {
+  position: relative;
+  height: clamp(200px, 30vw, 320px);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.page-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(111, 54, 16, 0.75));
+}
+
+.page-banner-content {
+  position: relative;
+  z-index: 1;
+  padding: 1.5rem;
+  max-width: 800px;
+}
+
+.page-banner-content h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.page-banner-content p {
+  color: #faf6f1;
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+  margin-bottom: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Blocks */
+.section-block {
+  margin-bottom: 3.5rem;
+}
+
+/* Responsive Cards */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(139, 69, 19, 0.1);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(111, 54, 16, 0.15) !important;
+}
+
+.card-header-custom {
+  background-color: var(--primary);
+  color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  letter-spacing: 0.2px;
+}
+
+.card-img-wrap {
+  padding: 10px 10px 0;
+  background-color: #ffffff;
+}
+
+.card-img-top {
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  display: block;
+}
+
+.card-img-wide {
+  height: 200px;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.price {
+  color: #0b63e5;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+/* Feature Badge */
+.badge {
+  font-weight: 600;
+  padding: 0.4em 0.7em;
+  font-size: 0.78rem;
+  border-radius: 6px;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  border-left: 4px solid var(--primary);
+}
+
+/* Newsletter Box */
+.newsletter-card {
+  background: linear-gradient(135deg, #ffffff 0%, var(--primary-subtle) 100%);
+  border: 1px solid rgba(139, 69, 19, 0.2);
+  border-radius: var(--card-radius);
+}
+
+/* Footer */
+.footer-custom {
+  background-color: #1e1b18;
+  color: #d1cbc4;
+}
+
+.footer-custom h5 {
+  color: #ffffff;
+}
+
+.footer-custom a {
+  color: #d1cbc4;
+}
+
+.footer-custom a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-custom .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-custom .social-links a:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 575.98px) {
+  .section-block {
+    margin-bottom: 2.5rem;
+  }
+  
+  .carousel-caption {
+    left: 4%;
+    right: 4%;
+    bottom: 14px;
+    padding: 10px 12px;
+  }
+  
+  .card-img-top {
+    height: 190px;
+  }
+  
+  .card-img-wide {
+    height: 180px;
+  }
+  
+  .navbar-custom .navbar-brand {
+    font-size: 1.15rem !important;
+  }
+  
+  .navbar-nav {
+    padding-top: 0.5rem;
+  }
+  
+  .navbar-nav .nav-item {
+    margin-bottom: 2px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-img-top {
+    height: 160px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-img-top {
+    height: 160px;
+  }
+}

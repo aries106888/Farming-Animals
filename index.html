@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Valley Animal Farm | Quality Livestock and Dairy</title>
+<link href="css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+:root {
+    --brown: saddlebrown;
+    --dark-brown: rgb(111, 54, 16);
+    --cream: rgb(250, 246, 241);
+    --text-dark: rgb(51, 51, 51);
+    --text-gray: rgb(75, 85, 99);
+    --orange: rgb(217, 119, 6);
+    --charcoal: rgb(33, 37, 41);
+    --light-gray: rgb(209, 213, 219);
+    --blue: rgb(13, 110, 253);
+    --white: white;
+    --near-black: rgb(17, 17, 17);
+}
+body {
+    background-color: var(--cream);
+    color: var(--text-dark);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+h2 {
+    color: var(--dark-brown);
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding-bottom: 8px;
+    display: inline-block;
+    border-bottom: 3px solid var(--brown);
+}
+p {
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+a {
+    text-decoration: none;
+    color: var(--brown);
+    transition: all 0.2s ease-in-out;
+}
+a:hover {
+    color: var(--orange);
+}
+.navbar-custom { background-color: var(--brown); }
+.footer-custom { background-color: var(--charcoal); color: var(--light-gray); }
+.carousel-item { height: 380px; background-color: var(--near-black); }
+.carousel-item img { object-fit: cover; width: 100%; height: 100%; }
+.carousel-caption { background: rgba(139, 69, 19, 0.75); border-radius: 8px; left: 15%; right: 15%; bottom: 40px; padding: 18px; }
+.carousel-caption p { color: var(--white); }
+.section-block { margin-bottom: 4rem; }
+.card { transition: transform 0.25s, box-shadow 0.25s; border: none; border-radius: 8px; overflow: hidden; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12) !important; }
+.card-header-custom { background-color: var(--brown); color: var(--white); text-align: center; font-weight: 600; font-size: 0.9rem; padding: 12px; }
+.card-img-top { height: 150px; object-fit: cover; padding: 12px 12px 0; }
+.card-img-wide { height: 200px; }
+.price { color: var(--blue); font-weight: 600; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom">
+  <div class="container">
+    <a class="navbar-brand text-white fw-bold fs-4" href="index.html"><i class="bi bi-paw-fill"></i> Green Valley Animal Farm</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link text-white active fw-semibold" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="livestock.html">Livestock</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="Dairyproducts.html">Dairy Products</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="poultry.html">Poultry</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="AboutUs.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50" href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="5000">
+      <img src="images/hero-cows.jpg" class="d-block w-100" alt="Cows grazing at sunset">
+      <div class="carousel-caption"><h3 class="fw-bold">Quality Livestock Farming</h3>
+        <p class="mb-0 text-white">Healthy animals raised in natural environments</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="images/hero-dairy.jpg" class="d-block w-100" alt="Dairy herd on green pasture">
+      <div class="carousel-caption">
+        <h3 class="fw-bold">Fresh Dairy Daily</h3>
+        <p class="mb-0 text-white">Milk, cheese, yogurt and butter straight from our farm</p></div></div>
+    <div class="carousel-item" data-bs-interval="5000"><img src="images/hero-poultry.jpg" class="d-block w-100" alt="Free range chickens">
+      <div class="carousel-caption"><h3 class="fw-bold">Free Range Poultry</h3><p class="mb-0 text-white">Chickens, eggs and turkeys raised on natural feed</p></div></div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+</div>
+
+<main class="container py-5" style="max-width:1000px;">
+
+  <!-- SECTION 1: 4 COLUMNS -->
+  <section class="section-block text-center" id="livestock">
+    <h2 class="mb-4">Our Dairy Cattle</h2>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3"><div class="card h-100 shadow-sm"><div class="card-header-custom">Fresian Cows</div><img src="images/fresian-cows.jpg" class="card-img-top" alt="Fresian cows grazing" loading="lazy"><div class="card-body py-2"><p class="small mb-2">High-yield Fresian cows producing rich, creamy milk daily.</p><div class="price">Ksh 80,000 each</div><span class="badge bg-warning text-dark">High Milk Yield</span></div></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="card h-100 shadow-sm"><div class="card-header-custom">Jersey Cows</div><img src="images/jersey-cows.jpg" class="card-img-top" alt="Jersey cows on pasture" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Jersey cows known for high butterfat content in their milk.</p><div class="price">Ksh 75,000 each</div><span class="badge bg-info text-dark">Premium Quality</span></div></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="card h-100 shadow-sm"><div class="card-header-custom">Ayrshire Cattle</div><img src="images/ayrshire-cattle.jpg" class="card-img-top" alt="Ayrshire cattle" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Hardy Ayrshire breed, excellent for local climate conditions.</p><div class="price">Ksh 65,000 each</div><span class="badge bg-success">Climate Adapted</span></div></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="card h-100 shadow-sm"><div class="card-header-custom">Calves</div><img src="images/calves.jpg" class="card-img-top" alt="Young calves" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Healthy young calves, vaccinated and ready for new homes.</p><div class="price">Ksh 25,000 each</div><span class="badge bg-danger">15% off</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: 2 COLUMNS -->
+  <section class="section-block text-center" id="about">
+    <h2 class="mb-4">Why Choose Our Animal Farm</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-header-custom">Natural Animal Husbandry</div><img src="images/husbandry.jpg" class="card-img-top card-img-wide" alt="Cows and calves in a field" loading="lazy"><div class="card-body py-2"><p class="small mb-2">We practice ethical animal husbandry with free-range grazing, natural feed, and stress-free environments for all our animals.</p><div class="price">Humane Treatment Guaranteed</div><span class="badge bg-primary">Free Range</span></div></div></div>
+      <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-header-custom">Quality Assurance</div><img src="images/quality.jpg" class="card-img-top card-img-wide" alt="Healthy cow close up" loading="lazy"><div class="card-body py-2"><p class="small mb-2">All animals are regularly health-checked, vaccinated, and raised without growth hormones or unnecessary antibiotics.</p><div class="price">Health Certified Animals</div><span class="badge bg-warning text-dark">Vaccinated</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: 3 COLUMNS -->
+  <section class="section-block text-center" id="poultry">
+    <h2 class="mb-4">Poultry &amp; Eggs</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-header-custom">Free Range Chickens</div><img src="images/chickens.jpg" class="card-img-top" alt="Free range chickens" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Healthy chickens raised in open spaces, fed natural grains.</p><div class="price">Ksh 800 each</div><span class="badge bg-danger">Most Popular</span></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-header-custom">Fresh Eggs</div><img src="images/eggs.jpg" class="card-img-top" alt="Bowl of fresh eggs" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Daily collected free-range eggs, rich in nutrients and flavor.</p><div class="price">Ksh 20 per egg</div><span class="badge bg-success">Fresh Daily</span></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-header-custom">Turkey Birds</div><img src="images/turkeys.jpg" class="card-img-top" alt="Turkeys on grass" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Premium turkey birds, perfect for special occasions and holidays.</p><div class="price">Ksh 4,500 each</div><span class="badge bg-warning text-dark">Seasonal Favorite</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: 4 COLUMNS -->
+  <section class="section-block text-center" id="dairy-products">
+    <h2 class="mb-4">Dairy Products</h2>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3"><div class="card h-100 shadow-sm"><div class="card-header-custom">Fresh Milk</div><img src="images/milk.jpg" class="card-img-top" alt="Fresh milk" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Pasteurized fresh milk, delivered daily from our dairy.</p><div class="price">Ksh 80 per liter</div><span class="badge bg-warning text-dark">Daily Delivery</span></div></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="card h-100 shadow-sm"><div class="card-header-custom">Farm Cheese</div><img src="images/cheese.jpg" class="card-img-top" alt="Farm cheese wheels" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Artisanal cheese made from our farm's premium milk.</p><div class="price">Ksh 450 per kg</div><span class="badge bg-info text-dark">Aged 6 Months</span></div></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="card h-100 shadow-sm"><div class="card-header-custom">Natural Yogurt</div><img src="images/yogurt.jpg" class="card-img-top" alt="Natural yogurt" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Probiotic-rich yogurt with live cultures, no additives.</p><div class="price">Ksh 120 per 500ml</div><span class="badge bg-success">Probiotic</span></div></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="card h-100 shadow-sm"><div class="card-header-custom">Farm Butter</div><img src="images/butter.jpg" class="card-img-top" alt="Farm butter" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Creamy butter churned traditionally from fresh cream.</p><div class="price">Ksh 300 per 250g</div><span class="badge bg-danger">Handmade</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: 3 COLUMNS -->
+  <section class="section-block text-center">
+    <h2 class="mb-4">Goats &amp; Sheep</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-header-custom">Dairy Goats</div><img src="images/dairy-goats.jpg" class="card-img-top" alt="Dairy goats" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Saanen and Toggenburg goats for milk production.</p><div class="price">Ksh 15,000 each</div><span class="badge bg-warning text-dark">High Yield</span></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-header-custom">Meat Goats</div><img src="images/meat-goats.jpg" class="card-img-top" alt="Boer goats" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Boer goats for meat, excellent for commercial farming.</p><div class="price">Ksh 12,000 each</div><span class="badge bg-info text-dark">Fast Growing</span></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-header-custom">Sheep</div><img src="images/sheep.jpg" class="card-img-top" alt="Sheep flock" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Dorper and Red Maasai sheep for wool and meat.</p><div class="price">Ksh 10,000 each</div><span class="badge bg-success">Dual Purpose</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: 1 COLUMN -->
+  <section class="section-block text-center">
+    <h2 class="mb-4">Farm Manager's Message</h2>
+    <div class="card shadow-sm"><div class="card-header-custom">A Message From Our Farm Manager</div><img src="images/farm-field.jpg" class="card-img-top" style="height:220px;" alt="Green farm field" loading="lazy"><div class="card-body"><p class="fst-italic small mb-2">"At Green Valley Animal Farm, we believe in raising animals with respect and care. Happy animals mean better products for you. We're committed to sustainable farming practices that benefit both the animals and our customers."</p><div class="price">- Samuel Kariuki, Farm Manager</div><span class="badge bg-info text-dark">20+ Years Experience</span></div></div>
+  </section>
+
+  <!-- SECTION 7: 3 COLUMNS -->
+  <section class="section-block text-center">
+    <h2 class="mb-4">Our Farm Features</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-header-custom">Veterinary Care</div><img src="images/vet-care.jpg" class="card-img-top" alt="Vet examining calves" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Regular veterinary check-ups and emergency care for all animals.</p><div class="price">Health Guaranteed</div><span class="badge bg-success">24/7 Vet Available</span></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-header-custom">Natural Feeding</div><img src="images/feeding.jpg" class="card-img-top" alt="Cow eating fresh grass" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Animals fed with natural pasture, hay, and organic supplements.</p><div class="price">Chemical-Free Feed</div><span class="badge bg-warning text-dark">Organic</span></div></div></div>
+      <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-header-custom">Clean Facilities</div><img src="images/facilities.jpg" class="card-img-top" alt="Modern milking parlour" loading="lazy"><div class="card-body py-2"><p class="small mb-2">Modern, hygienic housing and milking facilities for animal comfort.</p><div class="price">Premium Facilities</div><span class="badge bg-info text-dark">Sanitized Daily</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: 2 COLUMNS -->
+  <section class="section-block text-center">
+    <h2 class="mb-4">Customer Testimonials</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-header-custom">Mary Wanjiku</div><img src="images/mary.jpg" class="card-img-top card-img-wide" alt="Mary Wanjiku" loading="lazy"><div class="card-body py-2"><p class="fst-italic small mb-2">"The milk from Green Valley Farm is the freshest I've ever tasted. My family loves their dairy products!"</p><div class="price">Regular Customer</div><span class="badge bg-warning text-dark">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div></div></div>
+      <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-header-custom">John Kamau</div><img src="images/john.jpg" class="card-img-top card-img-wide" alt="John Kamau" loading="lazy"><div class="card-body py-2"><p class="fst-italic small mb-2">"I bought two dairy cows from them last year. They were healthy and have been producing excellent milk."</p><div class="price">Dairy Farmer</div><span class="badge bg-warning text-dark">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: 2 COLUMNS -->
+  <section class="section-block text-center" id="contact">
+    <h2 class="mb-4">Contact &amp; Location</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-header-custom">Visit Our Farm</div><img src="images/farm-hills.jpg" class="card-img-top card-img-wide" alt="Farm hills" loading="lazy"><div class="card-body py-2 small">
+        <p class="mb-1"><i class="bi bi-geo-alt-fill text-primary"></i> Limuru Road, Kiambu County</p>
+        <p class="mb-1"><i class="bi bi-telephone-fill text-primary"></i> 0712 987 654</p>
+        <p class="mb-2"><i class="bi bi-clock-fill text-primary"></i> Mon-Sat, 7:00 AM - 6:00 PM</p>
+        <div class="price">Farm Tours Available</div><span class="badge bg-info text-dark">Book in Advance</span></div></div></div>
+      <div class="col-md-6"><div class="card h-100 shadow-sm"><div class="card-header-custom">Get in Touch</div><img src="images/farm-hills.jpg" class="card-img-top card-img-wide" alt="Farm hills" loading="lazy"><div class="card-body py-2 small">
+        <p class="mb-1"><i class="bi bi-envelope-fill text-primary"></i> info@greenvalleyfarm.co.ke</p>
+        <p class="mb-1"><i class="bi bi-truck text-primary"></i> Delivery Available in Nairobi</p>
+        <p class="mb-2"><i class="bi bi-people-fill text-primary"></i> Bulk Orders Welcome</p>
+        <div class="price">We Respond Within 24 Hours</div><span class="badge bg-success">Fast Response</span></div></div></div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: 1 COLUMN -->
+  <section class="section-block text-center">
+    <h2 class="mb-4">Stay Updated</h2>
+    <div class="card shadow-sm mx-auto" style="max-width:520px;"><div class="card-header-custom">Subscribe to Our Newsletter</div><img src="images/newsletter.jpg" class="card-img-top" style="height:160px;" alt="Friends celebrating at sunset" loading="lazy"><div class="card-body">
+      <p class="small">Get updates on new livestock, dairy products, farming tips, and special offers.</p>
+      <div class="input-group mb-2"><input type="email" class="form-control form-control-sm" placeholder="Enter your email address"><button class="btn btn-sm text-white" style="background-color:var(--brown);" type="button">Subscribe</button></div>
+      <span class="badge bg-primary">Farm updates straight to your inbox</span></div></div>
+  </section>
+</main>
+
+<footer class="footer-custom pt-5 pb-4">
+  <div class="container" style="max-width:1000px;">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6"><h5 class="text-white fw-bold mb-2"><i class="bi bi-paw-fill"></i> Green Valley Animal Farm</h5><p class="small mb-2">Providing quality livestock and dairy products since 2005. Healthy animals, happy customers.</p><span class="badge bg-primary">Certified Animal Farm</span></div>
+      <div class="col-lg-2 col-md-6"><h5 class="text-white fw-bold mb-2">Quick Links</h5><ul class="list-unstyled small mb-0"><li><a href="index.html" class="text-light">Home</a></li><li><a href="livestock.html" class="text-light">Livestock</a></li><li><a href="Dairyproducts.html" class="text-light">Dairy Products</a></li><li><a href="poultry.html" class="text-light">Poultry</a></li><li><a href="AboutUs.html" class="text-light">About Us</a></li><li><a href="Contact.html" class="text-light">Contact</a></li></ul></div>
+      <div class="col-lg-3 col-md-6"><h5 class="text-white fw-bold mb-2">Our Products</h5><ul class="list-unstyled small mb-0"><li><a href="#livestock" class="text-light">Dairy Cattle</a></li><li><a href="#poultry" class="text-light">Poultry &amp; Eggs</a></li><li><a href="#dairy-products" class="text-light">Dairy Products</a></li><li><a href="#livestock" class="text-light">Goats &amp; Sheep</a></li></ul></div>
+      <div class="col-lg-3 col-md-6"><h5 class="text-white fw-bold mb-2">Visit Our Farm</h5><p class="small mb-1"><i class="bi bi-geo-alt-fill"></i> Limuru Road, Kiambu County</p><p class="small mb-1"><i class="bi bi-clock-fill"></i> Open: Mon-Sat, 7AM-6PM</p><p class="small mb-2"><i class="bi bi-telephone-fill"></i> Phone: 0712 987 654</p>
+        <div class="d-flex gap-2"><a href="https://facebook.com" class="text-light"><i class="bi bi-facebook"></i></a><a href="https://twitter.com" class="text-light"><i class="bi bi-twitter"></i></a><a href="https://instagram.com" class="text-light"><i class="bi bi-instagram"></i></a><a href="https://pinterest.com" class="text-light"><i class="bi bi-pinterest"></i></a></div></div>
+    </div>
+    <hr class="border-secondary my-3"><div class="d-flex justify-content-between small"><span>&copy; 2026 Green Valley Animal Farm. All rights reserved.</span><span>Raising animals with care and respect</span></div>
+  </div>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

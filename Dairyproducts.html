@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Dairy Products | Green Valley Animal Farm</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+  :root {
+    --brown: saddlebrown;
+    --dark-brown: rgb(111, 54, 16);
+    --cream: rgb(250, 246, 241);
+    --primary-subtle: rgb(245, 235, 224);
+    --text-dark: rgb(51, 51, 51);
+    --text-gray: rgb(75, 85, 99);
+    --orange: rgb(217, 119, 6);
+    --charcoal: rgb(33, 37, 41);
+    --light-gray: rgb(209, 213, 219);
+    --blue: rgb(13, 110, 253);
+    --white: white;
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--text-dark);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  h2 {
+    color: var(--dark-brown);
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+
+  p {
+    line-height: 1.6;
+    color: var(--text-gray);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--brown);
+    transition: all 0.2s ease-in-out;
+  }
+
+  a:hover {
+    color: var(--orange);
+  }
+
+  /* Navbar */
+  .navbar-custom {
+    background-color: var(--brown);
+  }
+
+  .navbar-custom .navbar-brand {
+    font-weight: 700;
+  }
+
+  .navbar-custom .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .navbar-custom .nav-link:hover {
+    color: var(--white);
+  }
+
+  .navbar-custom .nav-link.active {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  /* Page banner */
+  .page-banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 90px 16px;
+    text-align: center;
+  }
+
+  .page-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(111, 54, 16, 0.6);
+  }
+
+  .page-banner-content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .page-banner h1 {
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  .page-banner p {
+    color: var(--white);
+    margin-bottom: 0;
+  }
+
+  /* Sections */
+  .section-block {
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--brown);
+  }
+
+  /* Cards */
+  .card {
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12) !important;
+  }
+
+  .card-header-custom {
+    background-color: var(--brown);
+    color: var(--white);
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .card-img-wrap {
+    padding: 12px 12px 0;
+  }
+
+  .card-img-wrap .card-img-top {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-img-wrap .card-img-wide {
+    height: 200px;
+  }
+
+  .price {
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .footer-custom {
+    background-color: var(--charcoal);
+    color: var(--light-gray);
+  }
+
+  .footer-custom h5 {
+    color: var(--white);
+  }
+
+  .footer-custom a {
+    color: var(--light-gray);
+  }
+
+  .footer-custom a:hover {
+    color: var(--orange);
+  }
+
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--light-gray);
+    border-radius: 4px;
+  }
+</style>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom">
+    <div class="container">
+      <a class="navbar-brand text-white fs-4" href="index.html">
+        <i class="bi bi-paw-fill"></i> Green Valley Farm
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="livestock.html">Livestock</a></li>
+          <li class="nav-item"><a class="nav-link active" href="Dairyproducts.html">Dairy Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="poultry.html">Poultry</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <header class="page-banner" style="background-image: url('images/hero-dairy.jpg');">
+    <div class="page-banner-content">
+      <h1>Farm-Fresh Dairy Products</h1>
+      <p>100% wholesome milk, handcrafted aged cheeses, probiotic yogurts, and golden churned butter</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container py-3 py-md-4" style="max-width: 1040px;">
+
+    <!-- DAIRY PRODUCT CATALOG -->
+    <section class="section-block text-center">
+      <h2 class="section-title">Our Premium Dairy Range</h2>
+      <p class="lead small mb-4 text-muted">From our pasture-fed cows directly to your family's table. Zero synthetic
+        hormones, preservatives, or artificial thickeners.</p>
+      <div class="row g-3 g-md-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header-custom">Fresh Whole Milk</div>
+            <div class="card-img-wrap">
+              <img src="images/milk.jpg" class="card-img-top" alt="Fresh bottle of whole milk" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <p class="small mb-2">Gently pasteurized fresh whole milk with natural cream layer. Delivered chilled
+                daily.</p>
+              <div>
+                <div class="price">Ksh 80 per liter</div>
+                <span class="badge bg-warning text-dark">Daily Delivery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header-custom">Artisanal Farm Cheese</div>
+            <div class="card-img-wrap">
+              <img src="images/cheese.jpg" class="card-img-top" alt="Artisanal cheese wheel" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <p class="small mb-2">Crafted by hand and aged 6 months for a rich, sharp, savory depth of flavor.</p>
+              <div>
+                <div class="price">Ksh 450 per kg</div>
+                <span class="badge bg-info text-dark">Aged 6 Months</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header-custom">Natural Probiotic Yogurt</div>
+            <div class="card-img-wrap">
+              <img src="images/yogurt.jpg" class="card-img-top" alt="Creamy bowl of yogurt" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <p class="small mb-2">Thick natural yogurt infused with live active cultures for optimal digestive gut
+                health.</p>
+              <div>
+                <div class="price">Ksh 120 per 500ml</div>
+                <span class="badge bg-success">Probiotic Live</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header-custom">Traditional Farm Butter</div>
+            <div class="card-img-wrap">
+              <img src="images/butter.jpg" class="card-img-top" alt="Block of churned butter" loading="lazy">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <p class="small mb-2">Slow-churned sweet cream butter with a velvety texture, ideal for cooking and
+                spreads.</p>
+              <div>
+                <div class="price">Ksh 300 per 250g</div>
+                <span class="badge bg-danger">Hand-Churned</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUALITY & PROCESSING STANDARDS -->
+    <section class="section-block text-center">
+      <h2 class="section-title">The Green Valley Quality Promise</h2>
+      <div class="row g-3 g-md-4">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header-custom">Touchless Milking Parlour</div>
+            <div class="card-img-wrap">
+              <img src="images/facilities.jpg" class="card-img-top" alt="Milking parlour sanitation" loading="lazy">
+            </div>
+            <div class="card-body">
+              <p class="small mb-2">Automated food-grade stainless-steel milking cluster pipelines ensuring zero hands
+                touch the milk.</p>
+              <span class="badge bg-success">100% Hygienic</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header-custom">Rapid Cold-Chain Storage</div>
+            <div class="card-img-wrap">
+              <img src="images/quality.jpg" class="card-img-top" alt="Chilling and quality testing" loading="lazy">
+            </div>
+            <div class="card-body">
+              <p class="small mb-2">Instant bulk tank cooling down to 4&deg;C within minutes of milking to preserve peak
+                freshness and taste.</p>
+              <span class="badge bg-info text-dark">Chilled to 4&deg;C</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-header-custom">Grass-Fed Purity</div>
+            <div class="card-img-wrap">
+              <img src="images/husbandry.jpg" class="card-img-top" alt="Pasture cows" loading="lazy">
+            </div>
+            <div class="card-body">
+              <p class="small mb-2">Our dairy cows graze on nutrient-dense pasture, providing naturally elevated CLA and
+                beta-carotene.</p>
+              <span class="badge bg-warning text-dark">Grass Fed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER TESTIMONIAL -->
+    <section class="section-block text-center">
+      <h2 class="section-title">Loved by Households Across Kenya</h2>
+      <div class="card shadow-sm testimonial-card mx-auto" style="max-width: 680px;">
+        <div class="card-header-custom">Mary Wanjiku &ndash; Resident, Westlands Nairobi</div>
+        <div class="card-img-wrap">
+          <img src="images/mary.jpg" class="card-img-top card-img-wide" alt="Mary Wanjiku customer" loading="lazy">
+        </div>
+        <div class="card-body p-4">
+          <p class="fst-italic small mb-3 text-secondary">
+            "I have been subscribing to the daily morning milk delivery for the past 8 months. The richness, clean cream
+            line, and taste of their milk takes me back to my childhood. The butter is exceptional for baking too!"
+          </p>
+          <div class="price mb-1">Weekly Dairy Subscriber</div>
+          <span class="badge bg-warning text-dark">&#9733;&#9733;&#9733;&#9733;&#9733; Verified Customer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIPTIONS & BULK ORDERS CALL TO ACTION -->
+    <section class="section-block text-center">
+      <div class="card shadow-sm p-4 p-md-5"
+        style="background: linear-gradient(135deg, #ffffff 0%, var(--primary-subtle) 100%);">
+        <h3 class="fw-bold mb-3">Set Up Daily or Weekly Dairy Deliveries</h3>
+        <p class="lead small mb-4 text-muted mx-auto" style="max-width: 650px;">
+          Enjoy fresh pasteurized milk, artisanal cheese, and natural yogurt delivered straight to your home or business
+          in Nairobi, Kiambu, and surrounding areas.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="tel:+254712987654" class="btn btn-warning fw-semibold px-4 py-2"><i
+              class="bi bi-telephone-fill me-2"></i>Call: 0712 987 654</a>
+          <a href="index.html#contact" class="btn btn-outline-dark fw-semibold px-4 py-2"><i
+              class="bi bi-envelope-fill me-2"></i>Inquire via Email</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-custom pt-5 pb-4">
+    <div class="container" style="max-width: 1040px;">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="fw-bold mb-2"><i class="bi bi-paw-fill"></i> Green Valley Animal Farm</h5>
+          <p class="small mb-3">Producing unadulterated farm-fresh dairy with modern hygienic milking pipelines and
+            rapid cold-chain distribution.</p>
+          <span class="badge bg-primary">Registered Animal Farm</span>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5 class="fw-bold mb-2">Pages</h5>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1"><a href="index.html">Home</a></li>
+            <li class="mb-1"><a href="livestock.html">Livestock</a></li>
+            <li class="mb-1"><a href="Dairyproducts.html">Dairy Products</a></li>
+            <li class="mb-1"><a href="poultry.html">Poultry</a></li>
+            <li class="mb-1"><a href="index.html#about">About Us</a></li>
+            <li class="mb-1"><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <h5 class="fw-bold mb-2">Dairy Range</h5>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-1"><a href="#">Fresh Whole Milk</a></li>
+            <li class="mb-1"><a href="#">Aged Cheddar Cheese</a></li>
+            <li class="mb-1"><a href="#">Natural Live Yogurt</a></li>
+            <li class="mb-1"><a href="#">Churned Farm Butter</a></li>
+            <li class="mb-1"><a href="#">Fresh Raw Cream</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h5 class="fw-bold mb-2">Visit Our Farm</h5>
+          <p class="small mb-1"><i class="bi bi-geo-alt-fill text-warning me-1"></i> Limuru Road, Kiambu County</p>
+          <p class="small mb-1"><i class="bi bi-clock-fill text-warning me-1"></i> Open: Mon-Sat, 7AM - 6PM</p>
+          <p class="small mb-2"><i class="bi bi-telephone-fill text-warning me-1"></i> Phone: 0712 987 654</p>
+          <div class="social-links d-flex gap-2 mt-2">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-sm-row justify-content-between text-center text-sm-start small">
+        <span>&copy; 2026 Green Valley Animal Farm. All rights reserved.</span>
+        <span class="mt-2 mt-sm-0">Raising animals with care and respect.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
